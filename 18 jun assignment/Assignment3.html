@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Assignment Page</title>
+  <style>
+    body {
+      background: linear-gradient(120deg, #eb57d9, #cfdef3);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: #88eaea;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+      padding: 40px 32px;
+      max-width: 900px;
+      width: 90%;
+      text-align: center;
+    }
+    h1 {
+      color: #2d6cdf;
+      margin-bottom: 18px;
+      font-size: 2.2rem;
+    }
+
+    input,label{
+
+    }
+    p {
+      color: #444;
+      margin-bottom: 28px;
+      font-size: 1.1rem;
+    }
+
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px 6px;
+      }
+     
+    }
+
+
+  </style>
+</head>
+<body>
+
+    <div class="container">
+    <form action="" class="">
+        <h1>Personal Details</h1>
+        <label for="name"> Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="m">Password</label>
+        <input type="password" name="m" id="m"> <br><br>
+
+        <label for="email">Email Id:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="">Gender: </label>
+       <label for="ss">Male</label>
+      <input name="Gender" type="radio" name="ss" id="ss">
+
+       <label for="pp">Female</label> 
+       <input name="Gender" type="radio" name="pp" id="pp"> <br><br>
+
+       <p>Educational Qualification</p>
+       <label for="pa">Degree</label>
+       <select name="pa" id="pa">
+        <option value="1">-Select Group</option>
+        <option value="2">BCA</option>
+        <option value="3">BBA</option>
+        <option value="4">MBA</option>
+        <option value="5">DIPloma</option>
+      </select> <br><br>
+
+      <label for="pa">Engineering</label>
+       <select name="pa" id="pa">
+        <option value="1">-Select Group</option>
+        <option value="2">EE</option>
+        <option value="3">CS</option>
+        <option value="4">CIVIL</option>  
+      </select> <br><br>
+
+      <label for="">Hobbies:</label>
+       <label for="">Playing chess</label>
+      <input type="checkbox" name="" id=""> 
+
+      <label for="">Reading books</label>
+      <input type="checkbox" name="" id=""> 
+
+      <p>Address</p>
+      <textarea cols="20" rows="5"></textarea><br><br>
+
+
+        <label for="file">Attach resume:</label>
+      <input type="file" name="file" id="file"> <br><br>
+
+      <input type="submit" name="" id="">
+
+    </form>
+    </div>
+
+</body>
+</html>
