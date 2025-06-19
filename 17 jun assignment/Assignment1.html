@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Webpage</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .section {
+            padding: 40px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        h1 {
+            color: #667eea;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin: 25px 0 15px 0;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #34495e;
+            font-size: 1.3rem;
+            margin: 20px 0 10px 0;
+        }
+        
+        p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        .hobby-image {
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            display: block;
+        }
+        
+        .biography-image {
+            max-width: 250px;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            display: block;
+        }
+        
+        .routine-image {
+            max-width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 15px auto;
+            display: block;
+        }
+        
+        .text-left { text-align: left; }
+        .text-center { text-align: center; }
+        .text-right { text-align: right; }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Section 1: My Favorite Hobby -->
+        <div class="section">
+            <h1>My Favorite Hobby</h1>
+            
+            <h2>Photography</h2>
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=400&q=80" alt="Photography equipment" class="hobby-image">
+            
+            <h3>Why I Love Photography</h3>
+            <p><b>Photography</b> has been my <i>passion</i> for over five years now. It's not just about <u>taking pictures</u>; it's about <b>capturing moments</b> that tell stories and evoke emotions. Every time I pick up my camera, I feel like I'm seeing the world through a different lens - literally and figuratively.</p>
+            
+            <p>The beauty of photography lies in its ability to <i>freeze time</i> and preserve memories that would otherwise fade away. Whether I'm shooting <b>landscapes</b> during golden hour, <u>portraits</u> of friends and family, or <i>street photography</i> in bustling cities, each click of the shutter captures a unique perspective of the world around me.</p>
+            
+            <p>What makes photography truly special is its <b>universal language</b>. A powerful image can transcend cultural and linguistic barriers, speaking directly to the heart. Through my lens, I've learned to appreciate the <i>small details</i> in everyday life - the way light filters through leaves, the expressions on people's faces, and the stories hidden in ordinary moments.</p>
+            
+            <p>If you're interested in photography, I highly recommend checking out <a href="https://500px.com" target="_blank">500px</a> for inspiration or <a href="https://photography.tutsplus.com" target="_blank">Tuts+ Photography</a> for tutorials.</p>
+        </div>
+
+        <!-- Section 2: Biography Page -->
+        <div class="section">
+            <h1>Biography: Albert Einstein</h1>
+            
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Albert Einstein portrait" class="biography-image">
+            
+            <h2>Early Life</h2>
+            <p class="text-left"><b>Albert Einstein</b> was born on <i>March 14, 1879</i>, in <u>Ulm, Germany</u>. From an early age, he showed an extraordinary curiosity about the natural world. His parents, Hermann and Pauline Einstein, recognized his intellectual potential and encouraged his education.</p>
+            
+            <p class="text-center">Despite facing challenges in traditional schooling, Einstein's <b>independent thinking</b> and <i>mathematical genius</i> became evident during his teenage years. He taught himself advanced mathematics and physics, often questioning the established scientific theories of his time.</p>
+            
+            <h2>Major Achievements</h2>
+            <p class="text-right">In <b>1905</b>, Einstein published his <i>Special Theory of Relativity</i>, which revolutionized our understanding of space and time. This <u>groundbreaking work</u> introduced the famous equation <b>E = mc²</b>, establishing the relationship between energy and mass.</p>
+            
+            <div class="highlight">
+                <p class="text-center"><b>Nobel Prize in Physics (1921)</b>: Einstein was awarded the Nobel Prize for his explanation of the photoelectric effect, which laid the foundation for quantum theory.</p>
+            </div>
+            
+            <h2>Later Life and Legacy</h2>
+            <p class="text-left">Einstein's <i>General Theory of Relativity</i>, published in <b>1915</b>, further transformed physics by describing gravity as a curvature of spacetime. His work continues to influence modern physics, from <u>black hole research</u> to <b>GPS technology</b>.</p>
+            
+            <p class="text-center">Beyond his scientific contributions, Einstein was also a <i>humanitarian</i> and <b>peace advocate</b>. He used his fame to speak out against war and promote international cooperation. His legacy extends far beyond physics, inspiring generations to think creatively and question the status quo.</p>
+        </div>
+
+        <!-- Section 3: Daily Routine -->
+        <div class="section">
+            <h1>My Daily Routine</h1>
+            
+            <h2>Morning</h2>
+            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=300&q=80" alt="Morning routine" class="routine-image">
+            <p>My day begins at <b>6:30 AM</b> with a refreshing glass of water and some light stretching. I believe in starting the day with <i>positive energy</i>, so I spend the first 30 minutes practicing <u>meditation</u> and setting my intentions for the day. After that, I enjoy a healthy breakfast while catching up on the latest news or reading a chapter from my current book.</p>
+            
+            <h2>Afternoon</h2>
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=300&q=80" alt="Afternoon activities" class="routine-image">
+            <p>The afternoon is dedicated to <b>productive work</b> and learning. I focus on my main tasks between <i>1:00 PM</i> and <u>4:00 PM</u>, taking short breaks every hour to maintain concentration. During these breaks, I might take a quick walk, practice some photography, or simply step away from the screen to rest my eyes.</p>
+            
+            <h2>Evening</h2>
+            <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=300&q=80" alt="Evening relaxation" class="routine-image">
+            <p>Evenings are for <b>relaxation</b> and <i>personal development</i>. I usually spend time with family, work on creative projects like photography, or engage in hobbies that bring me joy. Before bed, I practice <u>gratitude</u> by reflecting on the day's accomplishments and planning for tomorrow. I aim to be in bed by <b>10:30 PM</b> to ensure adequate rest.</p>
+            
+            <p class="text-center"><i>"A well-structured daily routine is the foundation of a productive and fulfilling life."</i></p>
+        </div>
+    </div>
+</body>
+</html>
