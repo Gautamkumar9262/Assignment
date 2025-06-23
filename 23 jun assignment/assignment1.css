@@ -1,0 +1,296 @@
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0%;
+            /* position: relative; */
+        }
+        /*NavBar*/
+        nav{
+            margin-top: 0%;
+            width: 100%;
+            height: 5rem;
+            display: flex;
+            justify-content: space-around;
+            position: sticky;
+            position: fixed;
+            top: 0vh;
+            background-color: white;
+            z-index: 10;
+        }
+        #home{   
+            color: chocolate;
+
+        }
+        .l-spn{
+            font-size: 3rem;
+            color: green;
+            position: absolute;
+            right: 5rem;
+        }
+        .r-spn{
+            font-size: 3rem;
+            font-weight: bolder;
+            color: green;
+            position: absolute;
+            left: 5rem;
+        }
+
+  
+        .logo{
+            color: rgb(26, 14, 106);
+            font-size: 2rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .link{
+            width: 50%;
+            margin-top:2.5rem ;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .link a:hover{
+            color: black;
+            text-decoration: underline;
+        }
+        #search{
+            height: 1.5rem;
+        }
+       
+        .link a{
+            text-decoration: none;
+            color: gray;
+        }
+        .cart{
+            width: 15%;
+            margin-top:2.5rem ;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .span{
+            color: chocolate;
+        }
+
+        .cart a{
+            color: black;
+            font-size: 1.2rem;
+        }
+        sup{
+            border: 1px solid;
+            font-size:0.8rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            border-radius: 1rem;
+            background-color: rgb(210, 238, 242);
+        }
+        /* Main Section*/
+        .main-section{
+            width: 100%;
+            height: 75%;
+            background-color: #f2f2f2;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .left-section{
+            width: 40%;
+        }
+
+        .para1{
+            margin: 0%;
+            font-size: 3.5rem;
+            font-family:'Courier New', Courier, monospace;
+           
+        }
+        .p1{
+             animation: para 2s infinite;
+        }
+       @keyframes para {
+        0%{
+            color: blueviolet;
+            left:10%;
+
+        }
+        25%{
+            transform: translateX(60px);
+            color: chocolate;
+        }
+        50%{
+            color: brown;
+        }
+        75%{
+            color: cadetblue;
+        }
+        100%{
+            color: rgb(22, 233, 50);
+        }
+       }
+        .para2{
+            margin: 0%;
+            font-size: 2rem;
+            font-family:'Courier New', Courier, monospace;
+        }
+        .para3{
+            font-size: 1.1rem;
+            font-family: 'Courier New';
+        }
+        /*Product categories*/
+        
+        .Product-Cat{
+            margin-top: 3rem;
+            height: 70%;
+        }
+        .upper-cat{
+            width: 60%;
+            margin: auto;
+        }
+        .cat-para{
+            text-align: center;
+        }
+        .cat-para3{
+            text-align: center;
+        }
+        .product{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .pro-card1{
+            width: 14.5rem;
+            height: 16rem;
+            /* border: 1px solid; */
+            align-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 2px 3px 3px gray;
+            border-radius: 10px;
+            margin:1rem;
+            transition: all 2s ease ;
+        }
+       
+        .pro-card1:hover{
+            transform: rotate(360deg);
+        }
+        
+        .btn{
+            background-color: green;
+            color: #f2f2f2;
+            border-radius: 10px;
+            padding: 5px 15px;
+            cursor: pointer;
+            border: none;
+            box-shadow: 2px 2px 3px grey;
+        }
+
+        /*Featured product*/
+        .f-product{
+            background-color: rgb(232, 243, 247);
+            height: 70%;
+            padding-bottom: 3rem;
+        }
+        .f-card1{
+            width: 20rem;
+            height: 65%;
+            box-shadow: 2px 2px 2px gray;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: all 1s ease-in;
+
+            .image{
+                width: 100%;
+                /* border-bottom: 1px solid; */
+                margin: 0%;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+
+            }
+        }
+        .f-card1:hover{
+            transform: scale(1.2);
+        }
+        .star{
+            display: flex;
+            justify-content: space-between;
+            padding-left: 8px;
+            padding-right: 8px;
+            margin: 0%;
+        }
+        .detail{
+            padding-left: 8px;
+        }
+        .card-container{
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-evenly;
+        }
+       .pro-cat{
+        padding-top: 1rem;
+       }
+       /* footer */
+
+       footer{
+        background-color: rgb(38, 38, 92);
+        color: white;
+       }
+       .top-foot{
+        display: flex;
+        /* justify-content: space-evenly; */
+
+        p{
+            width: 33%;
+            font-size: 1.5rem;
+            padding-left: 5rem; 
+        }
+       }
+
+       li{
+        list-style: none;
+        font-size: 1.5rem;
+        line-height: 1cm;
+       }
+       ul{
+        width: 33%;
+        padding-left: 5rem;
+       }
+
+       hr{
+        color: rgb(100, 100, 100);
+       }
+
+       .social-foot{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1.5rem;
+       }
+
+       input{
+        width: 200px;
+        height: 1.5rem;
+        border: none;
+        padding: 5px;
+       }
+       .foot-btn{
+        height: 2.2rem;
+        background-color: green;
+        color: white;
+        border: none;
+        
+       }
+       .s-logo{
+        font-size: 2rem;
+        display: flex;
+        justify-content: start;
+        gap: 5rem;
+        margin-bottom: 2rem;
+       }
+       .c-right{
+        background-color: rgb(6, 6, 63);
+        color: white;
+        text-align: center;
+        margin-top: 0%;
+        padding: 1rem;
+       }
+    
