@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            
+        }
+        .task1-h1{
+            width: 100%;
+            background-color: rgb(4, 4, 56);
+            color: aliceblue;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 0%;
+
+        }
+        .task1{
+           
+            h2{
+                padding-left: 1rem;
+                margin-bottom: 3rem;
+            }
+            p{
+                padding-left: 2rem;
+            }
+
+        }
+
+      
+        .button{
+            width: 150px;
+            height: 80px;
+            color: aliceblue;
+            background-color: blue;
+            margin-left: 3rem;
+            border-radius: 2rem;
+            font-size: 1.3rem;
+            margin-bottom: 10rem;
+            
+        }
+        .button:hover{
+            animation-name: grow;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            transform: scale(1);
+            transition: all 0.5s ease-in;
+            
+
+        }
+        @keyframes grow {
+            0%{
+                width: 150px;
+                height: 80px;
+                background-color: blue;
+            }
+            50%{
+                width: 200px;
+                height: 100px;
+                background-color: darkorange;
+            }
+              100%{
+                width: 150px;
+                height: 80px;
+                background-color: blue;
+            }
+        }
+
+        .task2{
+            margin-bottom: 5 rem;
+        }
+        .bg{    
+            width: 300px;
+            height: 300px;
+            background-color: rgb(241, 218, 212);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem;
+            border-radius: 10px;
+        }
+
+        #img{
+            width: 200px;
+            animation-name: rotate;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes rotate {
+            from{   
+                width: 200px;
+            }
+            to{
+            transform: rotate(360deg);
+            }
+            
+        }
+
+    .heading{
+        padding: 1rem; 
+        animation-name: moving;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+    }
+   
+    .text-bg{
+        max-width: 100%;
+        padding: 1rem;
+        color: white;
+        background-color: blueviolet;
+
+    }
+    
+    @keyframes moving {
+        0%{
+            opacity: 0;
+
+        }
+        100%{
+            opacity: 1;
+            padding-left: 70%;
+        }
+    }
+
+    h2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight:bold;
+        padding-left: 1rem;
+        font-size: xx-large;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="task1-h1">CSS Animation Assignment</h1>
+
+    <div class="task1">
+    <h2>✅Task-1: <span>On hover:
+  - Background color changes smoothly
+  - The button grows slightly in size
+- Use transition for smooth effect</span></h2>
+    <p>
+</p>
+<button class="button">Hover me</button>
+    </div>
+
+
+    <div class="task2">
+        <h2>✅Task-2 : Create a gear-like icon or any square div with a gear symbol (🛠️ or ⚙️) that rotates continuously.</h2>
+
+        <div>
+            <div class="bg">
+                <img id="img" src="https://images.emojiterra.com/google/android-11/1024px/2699.png" alt="">
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="task3">
+        <h2>✅Task-3 :Display a heading (Welcome to CSS World) that:
+- Starts with opacity: 0 and slides in from the left
+- Ends at full opacity and centered
+- Duration: 3 seconds, plays only once
+</h2>
+
+<div class="text-bg">
+    <h1 class="heading">Welcome to CSS World</h1>
+</div>
+    
+    </div>
+</body>
+</html>
