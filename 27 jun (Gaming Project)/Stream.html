@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="profile.css">
+</head>
+<style>
+    /*main content*/
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    .stream-content {
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .live-stream{
+        width: 80%;
+        background-color: #222;
+        border-radius: 25px;
+        line-height: 40%;
+    }
+    .top-stream {
+        width: 40%;
+        background-color: #222;
+        border-radius: 25px;
+                line-height: 40%;
+
+
+    }
+
+    .live-stream-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        color: #fff;
+        margin: 0%;
+
+        p{
+            font-size: 2rem;
+            font-weight: 800;
+            padding: 10px;
+
+            span {
+                color: #ce5375;
+            }
+        }
+        .live-s-symbol {
+            font-size: 1.3rem;
+            color: gray;
+            font-weight: 600;
+        }
+    }
+    .live-stream-card {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+    .card1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
+        padding: 10px;
+
+        img {
+            width: 100%;
+            height: 350px;
+            border-radius: 15px;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            list-style: none;
+            line-height: 50%;
+            padding: 0;
+            margin: 10px 0;
+            
+            i{
+                color: #ce5375;
+            }
+        }
+
+        .card1-ul {
+            color: gray;
+            font-weight: 600;
+        }
+    }
+
+    .top-stream-card {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        .nav-card1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid gray;
+
+            div {
+                display: flex;
+                align-items: center;
+
+                span {
+                    font-size: 1.2rem;
+                    margin-right: 10px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 50px;
+                    border-radius: 50%;
+                }
+            }
+
+            p {
+                color: #fff;
+                font-weight: bold;
+                font-size: 1.2rem;
+                /* margin-left: 10px; */
+
+                i {
+                    background-color: white;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    color: #ce5375;
+                }
+            }
+
+            button {
+                background-color: #ce5375;
+                color: white;
+                border: none;
+                padding: 8px 20px;
+                border-radius: 15px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #fff;
+                    color: #ce5375;
+                }
+            }
+        }
+    }
+
+    /*Popular live stream*/
+    .popular-live-stream {
+        width: 95%;
+        background-color: #222;
+        border-radius: 25px;
+        padding: 20px;
+        margin-top: 20px;
+        position: relative;
+    }
+    .button{
+        position: absolute;
+        background-color: #ce5375;
+        color: white;
+        border: none;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        padding: 20px 30px;
+        border-radius: 15px;
+        cursor: pointer;
+        /* margin-top: 20px; */
+
+        &:hover {
+            background-color: #fff;
+            color: #ce5375;
+        }
+    }
+
+    .popular-card{
+        width: 100%;
+        display: flex;
+        justify-content: space-around   ;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .popular-card1{
+        width: 100%;
+        padding: 10px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+            height: 280px;
+            border-radius: 15px;
+            margin-right: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .card-description {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+
+            .logo {
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }
+            }
+
+            .r-logo {
+                margin-left: 20px;
+                line-height: 2rem;
+
+                p {
+                    
+                    color: #ce5375;
+                    font-weight: bold;
+                    margin: 0% auto;
+
+                    i{
+                        background-color: white;
+                        border-radius: 50%;
+                        width: 20px;
+                        height: 20px;
+                        color: #ce5375;
+                    }
+                }
+                .para{
+                    color: white;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+
+</style>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./images/logo.png" alt="Logo">
+
+        </div>
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Search...">
+        </div>
+        <div>
+            <a href="index.html" >Home</a>
+            <a href="Browse.html">Browse</a>
+            <a href="Details.html">Details</a>
+            <a href="Stream.html">Stream</a>
+            <a href="Profile.html">
+                <button  type="button">Profile <i class="fa-solid fa-user"></i></button>
+            </a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+
+    <div class="stream-content">
+        <div class="live-stream">
+            <div class="live-stream-header">
+                <p><u>Live</u> <span>Streams</span></p>
+                <p class="live-s-symbol">< ></p>
+            </div>
+            <div class="live-stream-card">
+                <div class="card1">
+                <img src="./images/clip-03.jpg" alt="">
+                <ul>
+                    <li>Ialand Rustry</li>
+                    <li>⭐4.8</li>
+                </ul>
+                <ul>
+                    <li class="card1-ul">249K Downloads</li>
+                    <li><i class="fa-solid fa-download"></i>2.3M</li>
+                </ul>
+                </div>
+                <div class="card1">
+                <img src="./images/clip-03.jpg" alt="">
+                <ul>
+                    <li>Ialand Rustry</li>
+                    <li>⭐4.8</li>
+                </ul>
+                <ul>
+                    <li  class="card1-ul">249K Downloads</li>
+                    <li><i class="fa-solid fa-download"></i>2.3M</li>
+                </ul>
+                </div>
+                <div class="card1">
+                <img src="./images/clip-03.jpg" alt="">
+                <ul>
+                    <li>Ialand Rustry</li>
+                    <li>⭐4.8</li>
+                </ul>
+                <ul>
+                    <li class="card1-ul">249K Downloads</li>
+                    <li><i class="fa-solid fa-download"></i>2.3M</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="top-stream">
+                <div class="live-stream-header">
+                <p><u>Top</u> <span>Streamers</span></p>
+                </div>
+            <div class="top-stream-card">
+            <div class="nav-card1">
+                <div>
+                    <span>01</span><img src="./images/avatar-01.jpg" alt="">
+                </div>
+
+                <div>
+                    <p><i class="fa-solid fa-check"></i> LahuTam</p>
+                </div>
+                
+                <div>
+                <button>Follow</button>
+                </div>
+            </div> 
+            <div class="nav-card1">
+                <div>
+                    <span>02</span><img src="./images/avatar-02.jpg" alt="">
+                </div>
+
+                <div>
+                    <p><i class="fa-solid fa-check"></i> JamTar</p>
+                </div>
+                
+                <div>
+                <button>Follow</button>
+                </div>
+            </div> 
+            <div class="nav-card1">
+                <div>
+                    <span>03</span><img src="./images/avatar-03.jpg" alt="">
+                </div>
+
+                <div>
+                    <p><i class="fa-solid fa-check"></i> YomTom</p>
+                </div>
+                
+                <div>
+                <button>Follow</button>
+                </div>
+            </div> 
+            <div class="nav-card1">
+                <div>
+                    <span>04</span><img src="./images/avatar-04.jpg" alt="">
+                </div>
+
+                <div>
+                    <p><i class="fa-solid fa-check"></i> AreLua</p>
+                </div>
+                
+                <div>
+                <button>Follow</button>
+                </div>
+            </div> 
+            <div class="nav-card1">
+                <div>
+                    <span>05</span><img src="./images/avatar-02.jpg" alt="">
+                </div>
+
+                <div>
+                    <p><i class="fa-solid fa-check"></i> KangN</p>
+                </div>
+                
+                <div>
+                <button>Follow</button>
+                </div>
+            </div> 
+            </div>
+    </div>
+
+    </div>
+
+    <div class="popular-live-stream">
+           <div class="live-stream-header">
+                <p><u>Most Popular</u> <span>Live Streams</span></p>
+            </div>
+            <div class="popular-card">
+
+                <div class="popular-card1">
+                
+                <img src="./images/popular-01.jpg" alt="">
+                <div class="card-description">
+                    <div class="logo">
+                    <img src="./images/avatar-01.jpg" alt="">
+                    </div>
+                    <div class="r-logo">
+                    <p><i class="fa-solid fa-check"></i> LahuTam</p>
+                    <p class="para">Just Talking With Fans</p>
+                    </div>
+                </div>
+                </div>
+                <div class="popular-card1">
+                <img src="./images/popular-02.jpg" alt="">
+                <div class="card-description">
+                    <div class="logo">
+                    <img src="./images/avatar-01.jpg" alt="">
+                    </div>
+                    <div class="r-logo">
+                    <p><i class="fa-solid fa-check"></i> LahuTam</p>
+                    <p class="para">Just Talking With Fans</p>
+                    </div>
+                </div>
+                </div>
+                <div class="popular-card1">
+                <img src="./images/popular-03.jpg" alt="">
+                <div class="card-description">
+                    <div class="logo">
+                    <img src="./images/avatar-01.jpg" alt="">
+                    </div>
+                    <div class="r-logo">
+                    <p><i class="fa-solid fa-check"></i> LahuTam</p>
+                    <p class="para">Just Talking With Fans</p>
+                    </div>
+                </div>
+                </div>
+                <div class="popular-card1">
+                <img src="./images/popular-05.jpg" alt="">
+                <div class="card-description">
+                    <div class="logo">
+                    <img src="./images/avatar-01.jpg" alt="">
+                    </div>
+                    <div class="r-logo">
+                    <p><i class="fa-solid fa-check"></i> LahuTam</p>
+                    <p class="para">Just Talking With Fans</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="popular-card">
+
+                <div class="popular-card1">
+                <img src="./images/popular-02.jpg" alt="">
+                <div class="card-description">
+                    <div class="logo">
+                    <img src="./images/avatar-01.jpg" alt="">
+                    </div>
+                    <div class="r-logo">
+                    <p><i class="fa-solid fa-check"></i> LahuTam</p>
+                    <p class="para">Just Talking With Fans</p>
+                    </div>
+                </div>
+                </div>
+                <div class="popular-card1">
+                <img src="./images/popular-04.jpg" alt="">
+                <div class="card-description">
+                    <div class="logo">
+                    <img src="./images/avatar-01.jpg" alt="">
+                    </div>
+                    <div class="r-logo">
+                    <p><i class="fa-solid fa-check"></i> LahuTam</p>
+                    <p class="para">Just Talking With Fans</p>
+                    </div>
+                </div>
+                </div>
+                <div class="popular-card1">
+                <img src="./images/popular-01.jpg" alt="">
+                <div class="card-description">
+                    <div class="logo">
+                    <img src="./images/avatar-01.jpg" alt="">
+                    </div>
+                    <div class="r-logo">
+                    <p><i class="fa-solid fa-check"></i> LahuTam</p>
+                    <p class="para">Just Talking With Fans</p>
+                    </div>
+                </div>
+                </div>
+                <div class="popular-card1">
+                <img src="./images/popular-03.jpg" alt="">
+                <div class="card-description">
+                    <div class="logo">
+                    <img src="./images/avatar-01.jpg" alt="">
+                    </div>
+                    <div class="r-logo">
+                    <p><i class="fa-solid fa-check"></i> LahuTam</p>
+                    <p class="para">Just Talking With Fans</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+                <button class="button">Load More Stream</button>
+
+    </div>
+
+    </div>
+</div>
+
+        <footer>
+            <p>&copy;Copyright 2026 Cyborg Gaming Comapny. All Rights Reserverd <br>Design Templates</p>
+        </footer>
+</body>
+</html>
