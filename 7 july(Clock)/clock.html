@@ -1,0 +1,194 @@
+<!-- //📘 Assignment: Pomodoro Timer – Countdown with Breaks and Custom Intervals
+Objective:
+Build a Pomodoro Timer web application that helps users manage their work and break sessions efficiently by following the Pomodoro Technique.
+
+🕒 What is the Pomodoro Technique?
+The Pomodoro Technique is a time management method where you:
+
+Work for 25 minutes (called a "Pomodoro")
+
+Take a 5-minute short break
+
+After 4 Pomodoros, take a longer break (15–30 minutes)
+
+✅ Assignment Requirements
+🧩 Features to Implement
+Custom Time Intervals
+
+Allow users to set their own:
+
+Work duration (default: 25 min)
+
+Short break duration (default: 5 min)
+
+Long break duration (default: 15 min)
+
+Number of Pomodoros before a long break (default: 4)
+
+Countdown Timer
+
+Display a real-time countdown for the current session.
+
+Show whether the session is a Work, Short Break, or Long Break.
+
+Start / Pause / Reset Controls
+
+Start: Begins the countdown.
+
+Pause: Pauses the timer.
+
+Reset: Resets the timer to the initial state.
+
+Automatic Transition Between Sessions
+
+After a Pomodoro ends, auto-switch to a break.
+
+After the short breaks and 4 Pomodoros, start a long break.
+
+Visual Indicators
+
+Display which Pomodoro cycle the user is on (e.g., 🔴 🔴 🔴 ⚪ for 3 out of 4 completed).
+
+Highlight the current session. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: bisque;
+        }
+        .container{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 500px;
+            background-color: rgb(186, 237, 248);
+            height: 400px;
+            border-radius: 20px;
+            box-shadow: 1px 1px 2px 6px rgb(249, 246, 249) ;
+
+
+               p{
+                display: flex;
+                justify-content: space-around;
+                a{
+                text-decoration: none;
+                font-size: 1.5rem;
+                color: white;
+                background-color: rgb(86, 90, 90);
+                border-radius: 5px;
+                padding: 5px;
+
+                }
+            }
+
+        }
+        .timer{
+            font-size: 2rem;
+        }
+        .btn{
+            button{
+                padding: 0.5rem;
+                width: 6rem;
+                margin: 5px;
+                cursor: pointer;
+            }
+          
+            #start{
+                color: white;
+                background-color: green;
+                font-size: 1rem;
+                border-radius: 15px;
+            }
+              #start:active{
+                background-color:rgb(29, 1, 1);
+            }
+            #pause{
+                color: white;
+                background-color: red;
+                font-size: 1rem;
+                border-radius: 15px;
+
+            }
+              #pause:active{
+                background-color:rgb(29, 1, 1);
+            }
+            #reset{
+                color: rgb(116, 112, 112);
+                background-color: yellow;
+                font-size: 1rem;
+                border-radius: 15px;
+
+            }
+              #reset:active{
+                background-color:rgb(29, 1, 1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+          <p>
+        <a href="clock.html">Pomodoro-clock</a>
+        <a href="clock2.html">Short-Time</a>
+        <a href="clock3.html">Long-Time</a>
+        </p>
+        <h1>POMODORO CLOCK</h1>
+        <div class="timer">
+            <h1 id="timer">25:00</h1>
+        </div>
+        <div class="btn">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        let t=document.getElementById('timer')
+        let s=document.getElementById('start');
+        let p=document.getElementById('pause');
+        let r=document.getElementById('reset');
+        let minutes=25;
+        let second=0;
+        let timerId;
+
+         s.addEventListener('click',()=>{
+            timerId=setInterval(()=>{
+            if(second===0){
+                second=59;
+                if(minutes!==0){
+                    minutes--
+                }
+            }
+            else{
+                second--;
+            }
+            t.innerHTML=`${minutes}:${second}`  
+          },1000)
+          
+        }
+        )
+
+    p.addEventListener('click',()=>{
+        clearInterval(timerId)
+    })
+
+    r.addEventListener('click',()=>{
+        minutes=25;
+        second=0;
+        timer.innerHTML=`${minutes}:0${second}`
+        clearInterval(timerId)
+
+    })
+    </script>
+</body>
+</html>
